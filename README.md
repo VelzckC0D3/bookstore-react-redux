@@ -67,7 +67,7 @@ Bookstore app is a React-based web application that enables users to browse book
 
 ## 🚀 Live Demo & preview <a name="live-demo"></a>
 
-- _You can visit the live demo [here](https://velzck-magician.netlify.app/)_
+- _You can visit the live demo [here](https://velzck-bookstore.netlify.app/)_
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
