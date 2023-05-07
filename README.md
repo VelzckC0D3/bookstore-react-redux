@@ -20,7 +20,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -168,14 +167,6 @@ If you like this project, be pending on my profile since I'll be doing much more
 I would like to thanks my Microverse Team for helping me to get this done.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ<a name="faq"></a>
-
-- **[What was the most difficult thin to achieve here?]**
-
-  - [The implementation of the API since it's the first time that I used it]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
