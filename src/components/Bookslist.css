@@ -1,0 +1,7 @@
+.booksUl {
+  background-color: white;
+  border: 3px solid black;
+  list-style: none;
+  margin: 1rem;
+  padding: 1rem;
+}
