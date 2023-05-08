@@ -26,7 +26,7 @@
 
 # 📖 [Bookstore] `ES6` `React` `API` <a name="about-project"></a>
 
-Bookstore app is a React-based web application that enables users to browse books and add them to a shopping cart. It utilizes the React Router library for navigation and includes various components for the user interface, such as a book list, book details, shopping cart, and header. These components are modular and can be reused, making it easier to maintain and update the app.
+Bookstore app is a React-based web application that enables users to browse books. It utilizes the React Router library for navigation and includes various components for the user interface, such as a book list, book details, shopping cart, and header. These components are modular and can be reused, making it easier to maintain and update the app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
