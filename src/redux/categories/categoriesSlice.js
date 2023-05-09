@@ -9,7 +9,7 @@ export const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    // Here I'll add the reducers for categories
+    getStatus: (state) => state.status,
   },
 });
 
