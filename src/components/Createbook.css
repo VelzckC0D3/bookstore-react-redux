@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px 10px 0 0;
 }
 
 .createBook {
@@ -20,4 +21,5 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  border-radius: 0 0 10px 10px;
 }
