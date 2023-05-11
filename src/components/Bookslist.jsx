@@ -4,9 +4,9 @@ import './Bookslist.css';
 
 const Bookslist = () => (
   <>
-    <ul className="booksUl">
-      <li className="booksLi"><Bookstate /></li>
-    </ul>
+    <div className="booksCont">
+      <Bookstate />
+    </div>
   </>
 );
 
