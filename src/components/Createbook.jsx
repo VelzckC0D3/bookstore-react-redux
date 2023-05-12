@@ -1,63 +1,112 @@
-import React, { useState } from 'react';
 import './Createbook.css';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook, getBooks } from '../redux/books/bookSlice';
 
-const Createbook = () => {
+const Form = () => {
+  const categories = [
+    'science-fiction',
+    'horror',
+    'action',
+    'romance',
+
+  ];
+
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  useEffect(() => {
+    getBooks();
+  }, [dispatch]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [formValues, setformValues] = useState({
+    title: '',
+    author: '',
+    categores: '',
+    item_id: '',
+  });
 
-    const newBook = {
-      item_id: Math.random().toString(36).substr(2, 9),
-      title,
-      author,
-      category: 'Fiction', // or whatever category you want to assign by default
-    };
-
-    dispatch(addBook(newBook));
-    setTitle('');
-    setAuthor('');
+  const onInputChange = ({ target }) => {
+    setformValues({
+      ...formValues,
+      [target.name]: target.value,
+    });
   };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    if (formValues.title.trim().length <= 0 || formValues.author.trim().length <= 0) {
+      return;
+    }
+
+    setIsLoading(true);
+    dispatch(postBook({
+      ...formValues,
+      item_id: uuidv4(),
+    })).then(() => {
+      setIsLoading(false);
+      setformValues({
+        title: '',
+        author: '',
+        item_id: '',
+        category: '',
+      });
+      dispatch(getBooks());
+    }).catch(() => {
+      setIsLoading(false);
+    });
+  };
+
+  if (isLoading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <>
       <div className="bookForm">
-        <h3 className="formTitle">ADD NEW BOOK</h3>
-        <form className="createBook" onSubmit={handleSubmit}>
+        <h2 className="formTitle">ADD NEW BOOK</h2>
+
+        <form className="createBook" onSubmit={onSubmit}>
           <input
-            placeholder="Book Title"
             type="text"
-            id="title"
+            placeholder="book title"
+            value={formValues.title}
             name="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
+            onChange={onInputChange}
           />
-          <br />
-          <br />
 
           <input
-            placeholder="Book Author"
             type="text"
-            id="author"
+            placeholder="add author"
+            value={formValues.author}
             name="author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            required
+            onChange={onInputChange}
+            className="author-input"
           />
-          <br />
-          <br />
 
-          <input type="submit" value="Add Book" />
+          <select
+            name="category"
+            placeholder="Choose one..."
+            value={formValues.category}
+            onChange={onInputChange}
+          >
+            <option value="">Choose Category</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+
+          <button className="btn-submit" type="submit">
+            <span className="ADD-BOOK Text-Style">ADD BOOK</span>
+          </button>
         </form>
       </div>
     </>
   );
 };
 
-export default Createbook;
+export default Form;
