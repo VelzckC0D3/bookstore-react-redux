@@ -23,3 +23,17 @@
   flex-wrap: wrap;
   border-radius: 0 0 10px 10px;
 }
+
+.loading {
+  background: white;
+  text-align: center;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 80%;
+}
