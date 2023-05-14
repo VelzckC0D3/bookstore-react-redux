@@ -1,27 +1,56 @@
 .bookForm {
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 
 .formTitle {
   margin: 0;
-  padding: 0.5rem 0;
-  background-color: black;
-  color: white;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #888;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border-radius: 10px 10px 0 0;
+  border-top: 1px solid rgb(222, 222, 222);
+  border-left: 1px solid rgb(222, 222, 222);
+  border-right: 1px solid rgb(222, 222, 222);
 }
 
 .createBook {
   background-color: white;
-  border: 3px solid black;
   padding: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  border-radius: 0 0 10px 10px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  border-left: 1px solid rgb(222, 222, 222);
+  border-right: 1px solid rgb(222, 222, 222);
+}
+
+.titleInput {
+  background-color: white;
+  height: 1.5rem;
+  width: 25%;
+  border: 1px solid rgb(198, 198, 198);
+}
+
+.authorInput {
+  width: 25%;
+  border: 1px solid rgb(198, 198, 198);
+}
+
+.categoryInput {
+  border: 1px solid rgb(198, 198, 198);
+  width: 20%;
+}
+
+.submit {
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  width: 15%;
 }
 
 .loading {

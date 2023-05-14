@@ -1,14 +1,13 @@
 import React from 'react';
-import './Books.css';
 import Bookslist from './Bookslist';
 import Createbook from './Createbook';
+import './Books.css';
 
 const Books = () => (
-  <>
-    <h2 className="booksTitle">Books</h2>
+  <div className="mainCont">
     <Bookslist />
     <Createbook />
-  </>
+  </div>
 );
 
 export default Books;

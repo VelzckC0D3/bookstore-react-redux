@@ -1,8 +1,5 @@
-.booksTitle {
-  background-color: rgb(157, 157, 157);
+.mainCont {
+  background-color: rgb(242, 242, 242);
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
