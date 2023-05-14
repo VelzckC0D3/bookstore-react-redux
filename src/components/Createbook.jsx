@@ -70,29 +70,31 @@ const Form = () => {
 
         <form className="createBook" onSubmit={onSubmit}>
           <input
+            className="titleInput"
             type="text"
-            placeholder="book title"
+            placeholder="Book Title"
             value={formValues.title}
             name="title"
             onChange={onInputChange}
           />
 
           <input
+            className="authorInput"
             type="text"
-            placeholder="add author"
+            placeholder="Book Author"
             value={formValues.author}
             name="author"
             onChange={onInputChange}
-            className="author-input"
           />
 
           <select
+            className="categoryInput"
             name="category"
             placeholder="Choose one..."
             value={formValues.category}
             onChange={onInputChange}
           >
-            <option value="">Choose Category</option>
+            <option value="">Category</option>
             {categories.map((category) => (
               <option key={category} value={category}>
                 {category}
@@ -100,7 +102,7 @@ const Form = () => {
             ))}
           </select>
 
-          <button className="btn-submit" type="submit">
+          <button className="submit" type="submit">
             <span className="ADD-BOOK Text-Style">ADD BOOK</span>
           </button>
         </form>

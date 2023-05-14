@@ -4,10 +4,17 @@
   padding: 0;
 }
 
-.book {
-  background-color: rgb(209, 209, 209);
+.bookCont {
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 3rem;
+  display: flex;
+  border: 1px solid rgb(222, 222, 222);
+  justify-content: space-between;
+}
+
+.book {
+  width: 15rem;
 }
 
 .category,
@@ -20,4 +27,133 @@
 .category {
   font-weight: 700;
   color: rgb(75, 75, 75);
+}
+
+.title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookButton {
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.bookButton:active {
+  color: #2a5479;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROGRESS */
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  border: 6px solid #ccc;
+  border-right-color: #307bbe;
+}
+
+.percent {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+}
+
+.percent-number {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.percent-text {
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+/* PROGRESS */
+
+.chapterCont {
+  background-color: rgb(255, 255, 255);
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current {
+  padding: 0;
+  margin: 0;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  margin: 0;
+  padding: 0;
+}
+
+.update {
+  width: 9rem;
+  font-size: 0.7rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background-color: #0290ff;
+  color: white;
+  border: none;
 }
